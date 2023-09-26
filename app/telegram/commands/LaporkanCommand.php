@@ -5,17 +5,28 @@ namespace App\Telegram\Commands;
 use Telegram\Bot\Commands\Command;
 use Telegram\Bot\Keyboard\Keyboard;
 use Telegram\Bot\Laravel\Facades\Telegram;
+use App\Models\LaporanBimbingan;
 
 class LaporkanCommand extends Command
 {
     protected string $name = 'laporkan';
-    protected string $description = 'Memulai melaporkan hasil bimbingan TA yang dilakukan ';
+    protected string $description = 'Memulai melaporkan hasil bimbingan TA yang dilakukan';
+    protected $signature = 'telegram:getdata';
+
 
     public function handle()
     {
-        $this->replyWithMessage([
-            'text' => "Perintah yang dapat dimasukan pada BOT Llen seperti berikut : \n/start\n/help\n/laporkan\n/lihat_laporan"
-        ]);
+
+        $items = LaporanBimbingan::all();
+
+        foreach ($items as $item) {
+            // Kirim data ke pengguna bot
+            $this->telegram->sendMessage([
+                'chat_id' => $this->update->getMessage()->getChat()->getId(),
+                'text' => "Laporan Hasil Data Bimbingan: \n\n ID Laporan : {$item->id}, \n\nHasil Bimbingan: {$item->hasil_bimbingan}, \n\nStatus Hasil Bimbingan: {$item->status}",
+            ]);
+        }
+
         
     }
 }

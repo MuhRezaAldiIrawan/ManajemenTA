@@ -38,6 +38,7 @@ return [
             'commands' => [
                 App\Telegram\Commands\StartCommand::class,
                 App\Telegram\Commands\HelpCommand::class,
+                App\Telegram\Commands\LaporkanCommand::class,
                 //Acme\Project\Commands\MyTelegramBot\BotCommand::class
             ],
         ],
