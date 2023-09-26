@@ -34,9 +34,10 @@ return [
         'mybot' => [
             'token' => env('TELEGRAM_BOT_TOKEN', '6612632789:AAH4HRFToW0O1MDwzTk9JwfsgnD9HGffT74'),
             'certificate_path' => env('TELEGRAM_CERTIFICATE_PATH', 'YOUR-CERTIFICATE-PATH'),
-            'webhook_url' => env('TELEGRAM_WEBHOOK_URL', 'https://eca1-180-252-202-231.ngrok-free.app/api/Llenapibot/webhook'),
+            'webhook_url' => env('TELEGRAM_WEBHOOK_URL', 'https://a924-125-162-212-64.ngrok-free.app/api/Llenapibot/webhook'),
             'commands' => [
                 App\Telegram\Commands\StartCommand::class,
+                App\Telegram\Commands\HelpCommand::class,
                 //Acme\Project\Commands\MyTelegramBot\BotCommand::class
             ],
         ],
