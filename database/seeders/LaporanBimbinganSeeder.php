@@ -18,6 +18,7 @@ class LaporanBimbinganSeeder extends Seeder
         $laporan = [
             [
                 'mahasiswa_id' => '1',
+                'mahasiswa_username' => 'Muh Reza Aldi Irawan',
                 'judul_id' => '1',
                 'hasil_bimbingan' => 'Memperbaiki Judul kembali karena terlalu panjang dan memperbaiki larat belakang kerna terjadi kontradiksi pada latar belakang',
                 'status' => 'pending',

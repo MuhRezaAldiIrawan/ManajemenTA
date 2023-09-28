@@ -23,6 +23,7 @@ class MahasiswaSeeder extends Seeder
                 'email' => 'rezaaldiirawan007@gmail.com',
                 'hp' => '082393169811',
                 'telegram_id' => '811746241',
+                'telegram_username' => 'Muh Reza Aldi Irawan',
                 'created_at' => now(),
                 'updated_at' => now()
             ]

@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('hp');
             $table->string('telegram_id');
+            $table->string('telegram_username');
             $table->timestamps();
         });
     }

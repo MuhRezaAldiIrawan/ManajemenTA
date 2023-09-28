@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('laporan_bimbingans', function (Blueprint $table) {
             $table->id();
             $table->foreignId('mahasiswa_id')->constrained('mahasiswas');
+            $table->string('mahasiswa_username');
             $table->foreignId('judul_id')->constrained('judul_t_a_s');
             $table->text('hasil_bimbingan');
             $table->string('status');
