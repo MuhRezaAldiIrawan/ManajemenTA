@@ -24,7 +24,17 @@ class JudulTASeeder extends Seeder
                 'status' => 'pending',
                 'created_at' => now(),
                 'updated_at' => now()
-            ]
+            ],
+            [
+                'mahasiswa_id' => '2',
+                'judul' => 'Cyber Security pada kampus PNUP',
+                'pbb_1' => '1',
+                'pbb_2' => '1',
+                'status' => 'pending',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+
         ];
         JudulTA::insert($judulta);
     }

@@ -26,7 +26,17 @@ class MahasiswaSeeder extends Seeder
                 'telegram_username' => 'Muh Reza Aldi Irawan',
                 'created_at' => now(),
                 'updated_at' => now()
-            ]
+            ],
+            [
+                'nama' => 'Ahmad Fauzy Febrian',
+                'nim' => '42519038',
+                'email' => 'ahmadfauzy@gmail.com',
+                'hp' => '082393169812',
+                'telegram_id' => '1252493818',
+                'telegram_username' => 'fauzy ahmad',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
         ];
         Mahasiswa::insert($mahasiswa);
     }

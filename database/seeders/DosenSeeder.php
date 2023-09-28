@@ -24,7 +24,17 @@ class DosenSeeder extends Seeder
                 'telegram_id' => '811746242',
                 'created_at' => now(),
                 'updated_at' => now()
-            ]
+            ],
+            [
+                'nama' => 'Rini Nur, S.T.,M.T.',
+                'nidn' => '45368921',
+                'email' => 'Rini@gmail.com',
+                'hp' => '08239317814',
+                'telegram_id' => '811746241',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            
         ];
         Dosen::insert($dosen);
     
