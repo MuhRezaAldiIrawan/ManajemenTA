@@ -11,22 +11,21 @@ use App\Models\LaporanBimbingan;
 class LihatLaporanCommand extends Command
 {
     protected string $name = 'lihat_laporan';
-    protected string $description = 'Memulai melaporkan hasil bimbingan TA yang dilakukan';
+    protected string $description = 'Melihat hasil laporan yang telah dibuat';
     protected $signature = 'telegram:getdata';
 
 
     public function handle()
     {
-        $fallbackUsername = $this->getUpdate()->getMessage()->from->first_name;
+        $fallbackUsername = $this->getUpdate()->getMessage()->from->username;
 
-        $first_name = $this->argument(
+        $username = $this->argument(
             'username',
             $fallbackUsername
         );
 
-
         // $items = LaporanBimbingan::all();
-        $items = LaporanBimbingan::where('mahasiswa_username', $first_name)->get();
+        $items = LaporanBimbingan::where('username_telegram', $username)->get();
 
         if ($items->isEmpty()) {
             $this->replyWithMessage([

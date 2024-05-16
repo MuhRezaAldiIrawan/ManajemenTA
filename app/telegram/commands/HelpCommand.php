@@ -14,7 +14,7 @@ class HelpCommand extends Command
     public function handle()
     {
         $this->replyWithMessage([
-            'text' => "Perintah yang dapat dimasukan pada BOT Llen seperti berikut : \n/start\n/help\n/laporkan\n/lihat_laporan"
+            'text' => "Perintah yang dapat dimasukan pada BOT Llen seperti berikut : \n/start\n/help\n/buat_laporan\n/lihat_laporan"
         ]);
         
     }

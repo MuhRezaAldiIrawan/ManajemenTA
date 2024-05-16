@@ -12,9 +12,14 @@ class LaporanBimbingan extends Model
 
     protected $table = 'laporan_bimbingans';
 
+    protected $fillable = [
+        'username_telegram',
+        'hasil_bimbingan',
+        'status',
+    ];
+
     public function mahasiswa()
     {
         return $this->belongsTo(Mahasiswa::class, 'mahasiswa_id');
     }
-    
 }

@@ -17,18 +17,14 @@ class LaporanBimbinganSeeder extends Seeder
     {
         $laporan = [
             [
-                'mahasiswa_id' => '1',
-                'mahasiswa_username' => 'Muh Reza Aldi Irawan',
-                'judul_id' => '1',
+                'username_telegram' => 'Rezaaldi007',
                 'hasil_bimbingan' => 'Memperbaiki Judul kembali karena terlalu panjang dan memperbaiki larat belakang kerna terjadi kontradiksi pada latar belakang',
                 'status' => 'pending',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
             [
-                'mahasiswa_id' => '2',
-                'mahasiswa_username' => 'fauzy ahmad',
-                'judul_id' => '2',
+                'username_telegram' => 'Fauzyahmad169',
                 'hasil_bimbingan' => 'memperbesar gambar',
                 'status' => 'pending',
                 'created_at' => now(),
